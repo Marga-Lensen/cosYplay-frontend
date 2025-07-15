@@ -1,0 +1,23 @@
+/* ====== Form & Logout Styling ====== */
+.form-container {
+    margin: 0 auto;
+    width: 300px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .form-container h2 {
+    font-family: 'Dancing Script', cursive;
+    /* font-weight: bold; */
+    font-size: 2.3rem;
+    /* text-shadow: 1px 1px rgb(122, 9, 9); */
+  }
+  
+  .form-container p {
+    color: rgb(117, 62, 62);
+    text-shadow: 1px 1px rgb(117, 76, 76);
+  }
+  

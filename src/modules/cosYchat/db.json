@@ -1,0 +1,34 @@
+{
+  "messages": [
+    {
+      "text": "test",
+      "username": "Manne",
+      "timeFormatted": "12:41:01",
+      "color": "#c8b8e2"
+    },
+    {
+      "text": "aber er ist doch der rechte",
+      "username": "Manne",
+      "timeFormatted": "12:42:03",
+      "color": "#c8b8e2"
+    },
+    {
+      "text": "und blau",
+      "username": "Manne",
+      "timeFormatted": "12:42:19",
+      "color": "#1c71d8"
+    },
+    {
+      "text": "ich liebe diese farbe💜",
+      "username": "ma-le",
+      "timeFormatted": "12:42:50",
+      "color": "#813d9c"
+    },
+    {
+      "text": "😇👻",
+      "username": "gast",
+      "timeFormatted": "13:20:55",
+      "color": "#26a269"
+    }
+  ]
+}

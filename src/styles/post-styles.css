@@ -1,0 +1,255 @@
+/* src/styles/post-styling.css */
+
+.post {
+  /* Hier nur das Nötigste */
+  box-sizing: border-box;
+}
+
+/* from App.css */
+.post #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.post .post-container {
+  /* background: url("SakuraGlas.png") no-repeat center center fixed; */
+  /* background: radial-gradient(rgba(240, 248, 255, 0.479), rgba(128, 0, 128, 0.86)), url ("/SakuraGlas.png")  ; */
+  /* background: radial-gradient(rgba(240, 248, 255, 0.479), rgba(128, 0, 128, 0.86)),   url(/SakuraGlas.png) no-repeat center center fixed; */
+  
+  /* genau so "kaputt muss der url sein (kein / und wohl leerzeichen) */
+  background: radial-gradient(rgba(240, 248, 255, 0.479), rgba(128, 0, 128, 0.486)),   url("Sakura Moon.jpg") no-repeat center center fixed;
+  min-height: 100vh;
+}
+.post .app-container {
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Quicksand" , sans-serif;
+    padding-top: 90px;  
+}
+
+
+/* === Headings === */
+h1{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1.2;
+  text-align: center;
+  /* padding: 12px; */
+  padding-left: .8em;
+  color: #f8f6f4;
+  text-shadow:
+    0 0 10px #2d1c55,
+    0 0 10px #f6bc6b,
+    0 0 20px #f3efda,
+    0 0 0px #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+h1:hover {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #e9dc9a,
+    0 0 20px #faa42b,
+    0 0 30px #7e12f9;
+  transform: translateY(-1.5px);
+}
+
+h2{
+  text-align: center;
+}
+
+/* ====== Button ====== */
+
+ .post button {
+  width: 45%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  padding: 0.6em 1.4em;
+  font-size: 1rem;
+  font-weight: 600;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+
+  background: linear-gradient(135deg, #0f0f0f, #c081c2);
+  color: #e9d8eb;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.home button:hover {
+  border-color: #e6a930;
+  background: linear-gradient(135deg, #333333, #1a1a1a);
+  transform: scale(1.05);
+  color: #d2b170;
+}
+
+button:hover {
+  background: #720281;
+}
+
+/* Toggle buttons */
+.post .toggle-buttons {
+  display: flex;
+  justify-content: center;
+/*   margin-bottom: 1rem; */
+  gap: 1rem;
+  
+}
+
+.post .active {
+  background-color: rgb(32, 144, 218);
+  color: rgb(235, 159, 243);
+  border-bottom: 4px solid;
+}
+
+.post .view-container {
+  border: 1px solid transparent;
+  padding: 1rem;
+  border-radius: 8px;
+  /* background: #1e1e1e8a; */
+  color: #0e0770;
+}
+
+/* from UploadForm.css */
+.post form input[type='text'],
+.post form textarea,
+.post form input[type='file'] {
+  width: 95%;
+  padding: 0.75rem;
+  margin: 0 0 1rem;
+  border-radius: 8px;
+  border: 1px solid rgb(32, 99, 158);
+  background: #d5d5f7b0;
+  /* color: #fff; */
+}
+
+.post .upload-container {
+  padding: .6em;
+  width: 100%;
+  background-color: rgba(240, 248, 255, 0.3671);
+  border: 1px solid indigo;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  align-items: center; /* das klappt nicht so */
+}
+
+/* from FileList.css */
+.post .file-list {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #010425a8;
+  border-radius: 12px;
+  border: 1px solid indigo;
+  color: white;
+}
+
+.post .file-list h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.post .file-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.post .file-list li {
+  border-bottom: 1px solid #444;
+  padding: 1rem 0;
+}
+
+.post .file-list img {
+  max-width: 100%;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+}
+
+/* from App2in1.css // side by side instead of toggle */
+.post .layout {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Each child takes half width on larger screens */
+.post .layout > * {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+/* Optional: center the layout on smaller screens */
+@media (max-width: 768px) {
+  .post .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post .layout > * {
+    flex: 1 1 100%;
+  }
+}
+
+/* added specific styles */
+.post .feed-container {
+  max-width: 400;
+  background: #421a6398;
+  border: 2px solid indigo;
+  border-radius: 12px;
+}
+
+.post .preview-box {
+  margin: 0 auto;
+padding: .6em;
+  width: 50%;
+  background-color: rgba(240, 248, 255, 0.3671);
+  border: 1px solid indigo;
+  border-radius: 12px;
+  
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.post .remove-image-btn {
+  display: flex;
+  justify-content: center;
+width: 30px;
+  background: rgba(161, 122, 197, 0.829);
+  /* background: none; */
+  border: 1px solid pink;
+  border-radius: 50%;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s;
+  
+}
+
+.post .vorschau-inhalt {
+  /* position: relative; */
+    display: flex;
+    flex-direction: column;
+  gap: 1.2em;
+}
+
+.upload-message {
+  margin-top: 2rem;
+  font-weight: bold;
+  color: #4caf50;
+  text-align: center;
+}
+

@@ -1,0 +1,244 @@
+/* ===========================
+   App.css — cosYspace Frontend
+   =========================== */
+
+/* ====== 1. General Layout ====== */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+/* ====== 2. Navigation ====== */
+nav {
+  background-color: #ce9dd45e;
+  color: rgb(9, 102, 156);
+  border: 1px solid;
+  width: 300px;
+  margin: 1rem auto;
+  padding: 1.1rem 4rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px rgb(24, 1, 46);
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  font-weight: 600;
+  color: rgb(151, 8, 132);
+  font-size: 1.3rem;
+  text-decoration: none;
+  background-color: transparent;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  border-radius: 7px;
+}
+
+nav a:hover {
+  color: rgb(9, 102, 156);
+  font-weight: 900;
+  border-bottom: 2px solid rgb(9, 102, 156);
+}
+
+/* ====== 3. Headings ====== */
+h1 {
+  font-size: 2.7em;
+  font-family: 'Dancing Script', cursive;
+  color: #520964;
+  width: 77vw;
+  margin: 15vh auto 1rem;
+  background-color: rgba(240, 248, 255, 0.336);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 span {
+  font-family: Nunito, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  color: #955b9c;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #720281;
+  font-size: 2.4em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h3,
+h4 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #520964;
+  text-align: center;
+}
+
+/* ====== 4. Forms ====== */
+.form-container {
+  border: 1px solid #080675;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 400px;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+form {
+  width: 300px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  width: 90%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #3a66df;
+  border-radius: 8px;
+  background-color: #f0edf39f;
+  color: #3e2a1b;
+  font-size: 1rem;
+}
+
+input:focus {
+  color: #160502;
+  outline: 2px solid #9f5fb8;
+  background: rgba(240, 248, 255, 0.74);
+}
+
+/* ====== 5. Buttons ====== */
+button,
+.continue-btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: inherit;
+  border: 1px solid rgba(16, 59, 145, 0.795);
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+button {
+  background-color: #8b0875d5;
+  color: white;
+}
+
+button:hover {
+  background-color: #720281;
+  border-color: indigo;
+}
+
+.continue-btn {
+  background-color: #7b328a7e;
+  border: none;
+}
+
+.continue-btn:hover {
+  background-color: #094974ad;
+}
+
+/* ====== 6. Messages & Info Boxes ====== */
+.message-box {
+  width: 300px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #080675;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.message-box p {
+  color: #112166;
+}
+
+.message-box p span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.message-box button {
+  background-color: #2f58caad;
+}
+
+.message-box button:hover {
+  background-color: #2421adb9;
+}
+
+.message-box.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message-box.error {
+  margin-top: 1rem;
+  background-color: #d430b13d;
+  color: #410329;
+  border: 1px solid #570c46;
+}
+
+/* ====== 7. Text Elements ====== */
+p {
+  color: #080675 !important;
+  font-size: 0.9rem;
+  text-shadow: none;
+}
+
+p span {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #080675;
+}
+
+.form-message {
+  color: #031241;
+  text-align: center;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* ====== 8. Action Container ====== */
+.cosyspace-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ====== 9. Weiterleitende Buttons (optional ergänzbar) ====== */
+/* #### Weiterleitende Buttons #### */
+.next-button,
+.prev-button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #6d30a8a9;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.next-button:hover,
+.prev-button:hover {
+  background-color: #4e1c7f;
+}

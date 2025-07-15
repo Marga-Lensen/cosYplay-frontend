@@ -1,0 +1,56 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-container {
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: goldenrod;
+  margin-bottom: 1.5rem;
+}
+
+/* Toggle buttons */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.toggle-buttons button {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid goldenrod;
+  background-color: transparent;
+  color: goldenrod;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+.toggle-buttons button:hover {
+  background-color: goldenrod;
+  color: indigo;
+}
+
+.toggle-buttons .active {
+  background-color: goldenrod;
+  color: black;
+}
+
+.view-container {
+  border: 1px solid transparent;
+  padding: 1rem;
+  border-radius: 8px;
+  /* background: #1e1e1e8a; */
+  color: #eee;
+}

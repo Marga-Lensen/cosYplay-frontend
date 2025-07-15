@@ -1,0 +1,39 @@
+:root {
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+/* input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #1e1e1e inset !important;
+  -webkit-text-fill-color: aliceblue !important;
+} */
+/* body.dark input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px rgba(45, 0, 80, 0.5) inset !important;
+  -webkit-text-fill-color: #fcbf49 !important;
+} */
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px rgba(163, 117, 199, 0.5) inset !important;
+  box-shadow: 0 0 0 1000px rgba(173, 109, 223, 0.651) inset !important;
+  -webkit-text-fill-color: #27022c !important;
+}
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px rgba(200, 150, 230, 0.6) inset !important;
+  outline: 1px solid #ffcc66; 
+}
+
+
+/* ursprunglich für ganze auth App cosYspace fullstack
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(rgba(240, 248, 255, 0.479), rgba(128, 0, 128, 0.86)),   url(/Sakura-mountain.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #600863e7;
+} */
+/* background-image: url(/Sakura-mountain.png); // nur das Bild */
+/*background-size: contain;  GANZES Bild sichtbar */
+

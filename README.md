@@ -1,0 +1,1 @@
+[Anleitung](../../strategien-Frontend-Implementierung/Anleitung-Frontend.md)

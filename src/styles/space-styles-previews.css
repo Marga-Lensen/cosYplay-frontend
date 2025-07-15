@@ -1,0 +1,83 @@
+/* WebDev_Jahreskurs/_final-project-MDM/_cosYplay-MaLe/cosYplay-aka-cosYspace-auth/_cosYplay-fullstack-SPA/auth-frontend/src/styles/space-styles.css */ 
+
+.cosyspace-container{
+  background-image: url("Sakura Moon");
+}
+/* Preview-Links Container */
+.cosyspace-previews {  
+ 
+  display: flex;
+  /* gap: 1.2rem; */
+  justify-content: center;
+  flex-wrap: wrap; /* Für mobile Darstellung */
+  margin: 2rem 0;
+}
+
+.preview-box{ 
+  margin: 0 auto;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border:2px solid #685d8a8a;
+  border-radius: 12%;
+  background-color: #c78bc971;
+  padding: 1em;
+}
+
+.preview-box button {
+  font-size: .8em;
+  padding: 5px 10px;
+}
+
+.trennlinie{
+  color: #685d8a8a;
+
+  text-shadow:
+    0 0 10px #2d1c55,
+    0 0 10px #f6bc6b,
+    0 0 20px #f3efda,
+    0 0 0px #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Einzelnes Preview-Element */
+.preview-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.preview-link:hover {
+  transform: translateY(-5px);
+}
+
+/* Bild-Stil */
+.preview-img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover; /* Bild füllt Container */
+  object-fit: contain;
+  border-radius: 12px;
+  /* border: 2px solid #e0e0e0; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.preview-img:hover .preview-img {
+  border-color: #a78bfa; /* Farbe an dein Design anpassen */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Beschriftung unter dem Bild */
+.preview-link span {
+  margin-top: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 1.1rem;
+}

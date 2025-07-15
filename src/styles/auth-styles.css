@@ -1,0 +1,337 @@
+/* WebDev_Jahreskurs/_final-project-MDM/_cosYplay-MaLe/cosYspace-auth/cosYspace-fullstack-SPA/auth-frontend/src/styles/auth-styles.css */
+
+/* ====== General Layout ====== */
+  /* body war noch in meinem index.css */
+.auth{ 
+/*     background: url(OG-ohneRand.png) no-repeat center center fixed;
+  min-height: 100vh; */
+    /* background: url(Sakura-mountain.png) no-repeat center center fixed;*/
+  min-height: 100vh; 
+  /* position: relative; */
+  font-family: "Quicksand";
+}
+
+
+.auth .auth-wrapper{
+background-color: #330644;
+/*   background: radial-gradient(rgba(240, 248, 255, 0.479), rgba(128, 0, 128, 0.86)),   url(/Sakura-mountain.png); */
+/*   background: radial-gradient(rgba(240, 248, 255, 0.479), rgba(128, 0, 128, 0.586)),   url(/Sakura-Moon.jpg);*/
+
+/* --------------------------------------------- */
+/* DAS hier ist mega spannend; WOW: */
+/*     background: radial-gradient(rgba(240, 248, 255, 0.479), rgba(128, 0, 128, 0.486), url(Sakura-Moon.jpg)); */
+
+min-height: 100vh;
+/* background: url("Sakura Moon.jpg") no-repeat center center fixed;  */
+/* ------------------------------------------------------------- */
+
+/* .chat-background { */
+/* background-color: #451094; */
+
+  background: radial-gradient(rgba(240, 248, 255, 0.5), rgba(128, 0, 128, 0.404)),   url("Sakura Moon.jpg") no-repeat center center fixed;
+min-height: 100vh;
+/* } */
+}
+
+
+.auth .auth-wrapper {
+  padding-top: 80px;  
+  overflow: hidden;  /* Seite soll NICHT scrollen */
+  height: 100vh;
+}
+
+
+
+.auth .page-container {
+
+  /* border:2px solid #3a66df; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  max-width: 90%;
+  min-height: 100vh;
+  padding: 1.2rem;
+  text-align: center;
+
+}
+
+/* ====== Navigation ====== */
+.auth nav {
+  background-color: #ce9dd45e;
+  color: rgb(9, 102, 156);
+  border: 1px solid ;
+  max-width: 240px;
+  margin: 0 auto;
+  padding: 1.1rem 4rem;
+  border-radius: 8px;
+  /* font-weight: bold; */
+  font-size: 1rem;
+  text-shadow: 1px 1px rgb(24, 1, 46);
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.auth nav > a {  /* im Navbar!  */
+  /* font-weight: 600; */
+  color: rgb(151, 8, 132);
+  font-size: 1.2rem;
+  text-decoration: inherit;    
+  background-color: transparent;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  border-radius: 7px;
+}
+.auth nav a:hover {
+  color: rgb(9, 68, 156); 
+  /* font-weight: bold; */
+  border-bottom: 2px solid rgb(9, 48, 156);
+}
+.auth a.pwd-reset {  /* im Navbar!  */
+  /* font-weight: 600; */
+  /* color: rgb(197, 192, 214)!important; */
+  font-size: 1.3rem;
+  text-decoration: inherit;    
+  background: linear-gradient(rgba(108, 134, 156, 0.616), rgba(194, 212, 226, 0.79), rgba(2, 16, 29, 0.533));
+  /* padding-bottom: 5px; */
+  padding: 5px 15px;
+  border-bottom: 2px solid transparent;
+  border-radius: 7px;
+}
+.auth a:hover {
+  color: rgb(9, 102, 156); 
+  /* font-weight: bold; */
+  /* text-decoration: underline; */
+  border-bottom: 2px solid rgb(9, 102, 156);
+}
+
+.auth .active {
+  color: royalblue;
+  border-bottom: 2px solid green;
+  border-radius: .7em;
+}
+
+/* ====== Headings ====== */
+.auth h1.page-container {
+  font-size: 2.7em;
+  font-family: 'Dancing Script', cursive;
+  color: #520964;
+  line-height: 1.1;
+  width: 77vw;
+  text-align: center;
+  margin: 1rem auto;
+  margin-top: 15vh;
+  background-color: rgba(240, 248, 255, 0.336);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.auth h1 span{
+  font-family: Nunito, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  color: #955b9c;
+}
+
+.auth h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #720281;
+  font-size: 2.4em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.auth h3 , .auth h4{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #520964;
+  /* font-weight: bolder; */
+  text-align: center;
+}
+
+.auth .form-container {
+  border: 1px solid #080675;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+/* background: #49586852; */
+  /* margin: 0 auto; // das tut nichts... */
+
+  background-color: rgba(182, 204, 238, 0.345); 
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10vh;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* ====== Form ====== */
+.auth form {
+  max-width: 300px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.212);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ====== Input ====== */
+.auth input {
+  width: 90%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #3a66df;
+  border-radius: 8px;
+  background-color: #f0edf39f;
+  color: #3e2a1b;
+  font-size: 1rem;
+}
+
+.auth input:focus {
+  color: #160502;
+  outline: 2px solid #9f5fb8;
+  background: rgba(240, 248, 255, 0.74);
+}
+/* .toggle-eye span {
+  font-size: 7px;
+} */
+/* ====== Button ====== */
+.auth button {
+  font-family: "Quicksand", system-ui,  sans-serif;
+  width: 100%;
+  padding: 0.8rem;
+  background: #8d0564e3;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(16, 59, 145, 0.795);
+  padding: 0.6em 1.2em;
+  font-weight: 400;
+  font-family: inherit;
+  background-color: #771967d5;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.auth button:hover {
+  border-color: indigo;
+
+  background: #720281;
+  color: aliceblue;
+}
+
+/* ====== Text Elements ====== */
+.auth p {
+  /* font-weight: bold; */
+  color: #080675 !important;
+  text-shadow: none;
+  font-size: 0.9rem;
+}
+
+.auth p span{
+  font-size: 1rem;
+  /* font-weight: bolder; */
+  color: #080675;
+}
+
+.auth .form-message {
+  color: #031241;
+  text-align: center;
+  font-weight: 900;
+  font-style: italic;
+}
+/* ====== Message Box ====== */
+.auth .message-box {
+  font-family: 'Quicksand',cursive;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 12px;
+  /* font-size: 1.3rem; */
+  /* font-weight: 400; */
+  color: #5e0933 !important; /*  .error  */
+  color: #490966 !important; /* normal feedback  */
+  /* text-shadow: 1px 1px 2px; */
+  /* color: green; */
+  background-color: rgba(187, 138, 165, 0.884); /* .error */
+  background-color: rgba(195, 188, 241, 0.3712); /* neutral */
+  /* background-color: rgba(211, 185, 209, 0.486);  */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+    border: 2px solid rgba(141, 141, 140, 0.692); /* // dark goldenrod */
+  border-radius: 12px;
+
+  box-shadow: 0 0 10px rgb(135, 178, 235); /* // goldene Aura */
+  transition: all 0.3s ease-in-out;
+}
+
+.auth .message-box p {
+  /* color: #061453 !important; */
+  text-shadow: none;
+  font-weight: 700;
+}
+
+.auth .message-box p span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-weight: bold; */
+  text-align: center;
+}
+.auth .message-box button{
+  background-color: #2f58caad;
+}
+
+.auth .message-box button:hover{
+  background-color: #2421adb9;
+}
+
+.auth .message-box.success {
+/*   background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb; */
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  max-width: 600px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+
+  color: #f0e6d2; /* // warmes helles Beige-Gold */
+  background-color: #284637c0; /* // dunkles navy */
+  border: 1px solid #a67c00; /* // dark goldenrod */
+  border-radius: 12px;
+
+  box-shadow: 0 0 12px rgba(204, 173, 0, 0.3); /* // goldene Aura */
+  transition: all 0.3s ease-in-out;
+}
+
+.auth .message-box.error {
+  margin-top: 1rem;
+  background-color: #c713a08e;
+  color: #3d043df8;
+  border: 1px solid #570c46;
+} 
+
+.auth .continue-btn {
+  /* margin-top: 1rem; */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #7b328a7e;
+}
+
+.auth .continue-btn:hover {
+  background-color: #094974ad;
+}
+
+/* .auth .cosyspace-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+} */

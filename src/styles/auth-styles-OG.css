@@ -1,0 +1,288 @@
+/* WebDev_Jahreskurs/_final-project-MDM/_cosYplay-MaLe/cosYspace-auth/cosYspace-fullstack-SPA/auth-frontend/src/styles/auth-styles.css */
+
+/* ====== General Layout ====== */
+
+/* body war noch in meinem index.css */
+/* ursprunglich für ganze auth App cosYspace fullstack
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(rgba(240, 248, 255, 0.479), rgba(128, 0, 128, 0.86)),   url(/Sakura-mountain.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #600863e7;
+} */
+/* background-image: url(/Sakura-mountain.png); // nur das Bild */
+/*background-size: contain;  GANZES Bild sichtbar */
+
+.page-container {
+  /* border:2px solid #3a66df; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.2rem;
+  text-align: center;
+  /* box-sizing: border-box; */
+}
+
+/* ====== Navigation ====== */
+nav {
+  background-color: #ce9dd45e;
+  color: rgb(9, 102, 156);
+  border: 1px solid ;
+  width: 400px;
+  margin: 1rem auto;
+  padding: 1.1rem 4rem;
+  border-radius: 8px;
+  /* font-weight: bold; */
+  /* font-size: 1.1rem; */
+  text-shadow: 1px 1px rgb(24, 1, 46);
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+nav > a {  /* im Navbar!  */
+  /* font-weight: 600; */
+  color: rgb(151, 8, 132);
+  font-size: 1.2rem;
+  text-decoration: inherit;    
+  background-color: transparent;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  border-radius: 7px;
+}
+nav a:hover {
+  color: rgb(9, 68, 156); 
+  /* font-weight: bold; */
+  border-bottom: 2px solid rgb(9, 48, 156);
+}
+.pwd-reset {  /* im Navbar!  */
+  /* font-weight: 600; */
+  color: rgb(41, 22, 105) !important;
+  font-size: 1.3rem;
+  text-decoration: inherit;    
+  background-color: transparent;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+
+  border-radius: 7px;
+}
+a:hover {
+  color: rgb(9, 102, 156); 
+  font-weight: bold;
+  /* text-decoration: underline; */
+border-bottom: 2px solid rgb(9, 102, 156);
+}
+
+.active {
+  color: royalblue;
+  border-bottom: 2px solid green;
+  border-radius: .7em;
+}
+/* ====== Headings ====== */
+h1.page-container {
+  font-size: 2.7em;
+  font-family: 'Dancing Script', cursive;
+  color: #520964;
+  line-height: 1.1;
+  width: 77vw;
+  text-align: center;
+  margin: 1rem auto;
+  margin-top: 15vh;
+  background-color: rgba(240, 248, 255, 0.336);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 span{
+  font-family: Nunito, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  color: #955b9c;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #720281;
+  font-size: 2.4em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h3 , h4{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #520964;
+  /* font-weight: bolder; */
+  text-align: center;
+}
+
+.form-container {
+  border: 1px solid #080675;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* margin: 0 auto; // das tut nichts... */
+
+  /* background-color: rgba(255, 255, 255, 0.9);  */
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 400px;
+  width: 90%;
+  margin: 2rem auto;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* ====== Form ====== */
+form {
+  width: 300px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== Input ====== */
+input {
+  width: 90%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #3a66df;
+  border-radius: 8px;
+  background-color: #f0edf39f;
+  color: #3e2a1b;
+  font-size: 1rem;
+}
+
+input:focus {
+  color: #160502;
+  outline: 2px solid #9f5fb8;
+  background: rgba(240, 248, 255, 0.74);
+}
+/* .toggle-eye span {
+  font-size: 7px;
+} */
+/* ====== Button ====== */
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #8d0564e3;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(16, 59, 145, 0.795);
+  padding: 0.6em 1.2em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #8b0875d5;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: indigo;
+  background-color: #2a033a;
+}
+
+button:hover {
+  background: #720281;
+}
+
+/* ====== Text Elements ====== */
+p {
+  /* font-weight: bold; */
+  color: #080675 !important;
+  text-shadow: none;
+  font-size: 0.9rem;
+}
+
+p span{
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #080675;
+}
+
+
+.form-message {
+  color: #031241;
+  text-align: center;
+  font-weight: 900;
+  font-style: italic;
+}
+/* ====== Message Box ====== */
+.message-box {
+  /* font-family: 'Dancing Script',cursive; */
+  width: 300px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 6px;
+  /* font-size: 1.3rem; */
+  font-weight: bold;
+  color: #080675 ;
+  /* color: green; */
+  background-color: rgba(223, 163, 208, 0.3);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.message-box p {
+  color: #061453 !important;
+  text-shadow: none;
+  font-weight: 500;
+}
+
+.message-box p span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-weight: bold; */
+  text-align: center;
+}
+.message-box button{
+background-color: #2f58caad;
+}
+
+.message-box button:hover{
+background-color: #2421adb9;
+}
+
+.message-box.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message-box.error {
+  margin-top: 1rem;
+  background-color: #c713a08e;
+  color: #3d043df8;
+  border: 1px solid #570c46;
+} 
+
+.continue-btn {
+  /* margin-top: 1rem; */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #7b328a7e;
+}
+
+.continue-btn:hover {
+  background-color: #094974ad;
+}
+
+.cosyspace-actions {
+  /* border: 2px solid #031241; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

@@ -1,0 +1,146 @@
+/* WebDev_Jahreskurs/_final-project-MDM/_cosYplay-MaLe/cosYspace-auth/cosYspace-fullstack-SPA/auth-frontend/src/styles/home-styles.css */
+
+/* === Global Reset === */
+.home * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* padding-top: 90px;   */
+
+
+}
+
+/* === Body Background === */
+.home  .home-container {
+  margin: 0 auto;
+  /* background: url("/SakuraGlas.png") no-repeat center center fixed; */
+  /* background-color: #f0f0f0;  */
+  background-size: cover;
+  min-height: 100vh;
+  /* max-width: 600px; */
+  border: 3px solid indigo;
+}
+
+/* === Header === */
+.home header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: rgba(68, 16, 70, 0.8);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* === Logo === */
+.home .logo {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+/* === Headings === */
+.home h1 {
+  margin-top: 5vh;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1.2;
+  text-align: center;
+  padding: 12px;
+  color: #f8f6f4;
+  text-shadow:
+    0 0 10px #2d1c55,
+    0 0 10px #f6bc6b,
+    0 0 20px #f3efda,
+    0 0 0px #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.home h1:hover {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #e9dc9a,
+    0 0 20px #faa42b,
+    0 0 30px #7e12f9;
+  transform: translateY(-1.5px);
+}
+
+.home h2{
+  font-family: "Dancing Script", cursive;
+  line-height: 1.2;
+  font-weight: 800;
+  text-align: center;
+  background-color: seashell;
+  padding: 12px;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+.home h3 {
+  font-size: 1.5em;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* === Message === */
+.home .message {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: rgb(43, 10, 44);
+  text-align: center;
+}
+
+/* === Button === */
+.home button {
+border-color: #2d1c55;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  padding: 0.8em 1.8em;
+  font-size: 0.95rem;
+  font-weight: 800;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #c081c2);
+  color: #e9d8eb;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.home button:hover {
+  border-color: #e6a930;
+  background: linear-gradient(135deg, #333333, #1a1a1a);
+  transform: scale(1.05);
+  color: #d2b170;
+}
+
+.auth-btn {
+  display: flex;
+  /* justify-content: space-between; */
+  /* border: 2px solid green; */
+  height: 80px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.auth-btn button{
+  width: 160px;
+  height: 45px;
+  text-align: center;
+}
+/* === To Do: Responsive Design === */
+/*
+@media (min-width: 480px) {
+  .home ... // deine Breakpoints hier
+}
+*/

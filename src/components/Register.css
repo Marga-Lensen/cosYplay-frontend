@@ -1,0 +1,17 @@
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  padding-right: 2.5rem; /* so text doesn't overlap icon */
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  user-select: none;
+}

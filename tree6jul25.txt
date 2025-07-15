@@ -1,0 +1,27 @@
+src/modules
+├── cosYchat
+│   ├── chat-server.js
+│   ├── ChatWidget-complete.jsx
+│   ├── ChatWidget.jsx
+│   ├── CosYchat-bg-test.css
+│   ├── CosYchat.css
+│   ├── CosYchat.jsx
+│   ├── db.json
+│   └── utils
+│       ├── connectIO.js
+│       └── connectIO-mini.js
+├── cosYpost
+│   ├── components
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── FileList.jsx
+│   │   └── UploadForm.jsx
+│   └── CosYpost.jsx
+└── cosYwords
+    ├── cosYwords.css
+    ├── CosYwords.css
+    ├── cosYwords.jsx
+    ├── CosYwords.jsx
+    └── SakuraGlas.png
+
+6 directories, 19 files
