@@ -24,7 +24,7 @@ const CosYspace = () => {
 
     setTimeout(() => {
       logout();         // Session beenden
-      navigate("/");    // Zur Startseite
+      navigate("/cosYhome");    // Zur Startseite
     }, 3500); // Muss mit Aperture-Animation übereinstimmen
   };
 
