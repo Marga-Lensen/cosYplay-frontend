@@ -62,6 +62,16 @@ function CosYwords() {
     generateMessage(); // beim laden der Seite wird sofort eine Nachricht generiert;
   }, []);
 
+    const handleRegister = () => {
+    console.log("📸 Login-Button gedrückt");
+    setIsApertureOpen(true);
+  setMagicMessage("✨ Das Portal öffnet sich und du kannst zum geschützten Bereich cosYspace 🌸 gehen!");
+    // Magie & Weiterleitung nach 2s
+    setTimeout(() => {
+      navigate('/register');
+      setMagicMessage(""); // Nachricht nach Navigation ausblenden (optional)
+    }, 6000);
+  };
     const handleLogin = () => {
     console.log("📸 Login-Button gedrückt");
     setIsApertureOpen(true);
@@ -90,7 +100,7 @@ function CosYwords() {
 
       <div className="auth-btn">
         {/* <button onClick={() => navigate("/register")}>Registrierung</button> */}
-        <button onClick={handleLogin}>Registrierung</button>
+        <button onClick={handleRegister}>Registrierung</button>
         {/* <button onClick={() => navigate("/login")}>Login</button>{" "} */}
       <button onClick={handleLogin}>Login</button>
       </div>
