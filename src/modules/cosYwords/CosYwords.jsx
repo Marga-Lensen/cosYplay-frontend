@@ -6,6 +6,9 @@ import Aperture from "../../components/Aperture";
 function CosYwords() {
   const [message, setMessage] = useState(null);
   const [isMessageVisible, setIsMessageVisible] = useState(false);
+  const [isApertureOpen, setIsApertureOpen] = useState(false);
+  const [magicMessage, setMagicMessage] = useState("");
+
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -59,6 +62,18 @@ function CosYwords() {
     generateMessage(); // beim laden der Seite wird sofort eine Nachricht generiert;
   }, []);
 
+    const handleLogin = () => {
+    console.log("📸 Login-Button gedrückt");
+    setIsApertureOpen(true);
+  setMagicMessage("✨ Das Portal öffnet sich und du kannst zum geschützten Bereich cosYspace 🌸 gehen!");
+    // Magie & Weiterleitung nach 2s
+    setTimeout(() => {
+      navigate('/login');
+      setMagicMessage(""); // Nachricht nach Navigation ausblenden (optional)
+    }, 6000);
+  };
+
+
   return (
     <div className="home-container">
       {/*       <header>
@@ -74,11 +89,20 @@ function CosYwords() {
       <button onClick={generateMessage}>neue cos🍸️words</button>
 
       <div className="auth-btn">
-        <button onClick={() => navigate("/register")}>Registrierung</button>
-        <button onClick={() => navigate("/login")}>Login</button>{" "}
+        {/* <button onClick={() => navigate("/register")}>Registrierung</button> */}
+        <button onClick={handleLogin}>Registrierung</button>
+        {/* <button onClick={() => navigate("/login")}>Login</button>{" "} */}
+      <button onClick={handleLogin}>Login</button>
       </div>
-      <Aperture />
+      <Aperture  isOpen={isApertureOpen} />
       {/* hier muss noch der Login verknüpft werden */}
+
+      {magicMessage && (
+  <div className="magic-message">
+    <p>{magicMessage}</p>
+  </div>
+)}
+
     </div>
   );
 }

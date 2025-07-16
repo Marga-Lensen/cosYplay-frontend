@@ -231,3 +231,32 @@ h1.home:hover {
   background-color: #1e978d83;
   padding: .3em;
 }
+
+
+
+.magic-message {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #d9c9ff, #8a6aff, #d9c9ff);
+  background: linear-gradient(90deg, #d9c9ffc7, #8a6aff9a, #d9c9ffaf);
+  background-size: 200% auto;
+  color: #5a2ea6;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: 2px solid indigo;
+  box-shadow: 0 0 8px rgba(138, 106, 255, 0.5);
+  animation: shine 5s linear infinite;
+  user-select: none;
+  text-align: center;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}

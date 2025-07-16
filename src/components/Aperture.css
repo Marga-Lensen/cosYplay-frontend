@@ -1,8 +1,8 @@
 .aperture-container {
   /* width: 300px; */
-  width: 100px;
+  width: 120px;
   /* height: 300px; */
-  height: 100px;
+  height: 120px;
   margin: 14px auto;
   cursor: pointer;
   background: radial-gradient(circle at center, #111 0%, #222 100%);
@@ -22,7 +22,7 @@
 }
 
 .aperture-svg {
-  width: 90%;
+  width: 96%;
   height: auto;
   display: block;
 }

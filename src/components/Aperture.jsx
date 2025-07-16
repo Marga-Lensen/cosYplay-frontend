@@ -1,19 +1,38 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import "./Aperture.css";
 
 const NUM_BLADES = 28;
 const BLADE_LENGTH = 60;
 const BLADE_WIDTH = 20;
 
-const Aperture = () => {
+const Aperture = ({isOpen=false}) => {
+  console.log("🔥 Aperture component is being rendered!");
+
   // const [isOpen, setIsOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
+  // const [isOpen, setIsOpen] = useState(true);
+      // console.log("🌀 isOpen in Aperture:", isOpen);
+      // console.log("%c🌀 Aperture Render | isOpen:", "background: purple; color: white; font-weight: bold; padding: 2px 6px", isOpen);
+ useEffect(() => {
+    console.log("🎯 isOpen changed:", isOpen);
+
+    if (isOpen) {
+      // Optional: Aktionen beim Öffnen
+      console.log("🔓 Aperture öffnet sich...");
+    } else {
+      console.log("🔒 Aperture schließt sich...");
+    }
+
+    // Hier kannst du auch ein Timer-basiertes navigate auslösen,
+    // aber das gehört besser in den übergeordneten Component (z. B. CosYwords)
+  }, [isOpen]);
+
 
   const blades = Array.from({ length: NUM_BLADES });
 
   return (
     // <div className="aperture-container" onClick={() => setIsOpen(!isOpen)}>
-    <div className="aperture-container" onClick={() => setIsOpen(!isOpen)}>
+    <div className="aperture-container" >
+
 
       <svg viewBox="0 0 200 200" className="aperture-svg">
         {/* <circle cx="100" cy="100" r="95" fill="#111" stroke="#333" strokeWidth="2" /> */}
@@ -33,7 +52,7 @@ const Aperture = () => {
                 rotate(${openRotate}, 100, 100)
               `}
               style={{
-                transition: "all 0.6s ease-in-out",
+                transition: "all 0.9s ease-in-out",
               }}
             >
               <path
