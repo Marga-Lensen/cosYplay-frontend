@@ -50,7 +50,7 @@ const CosYspace = () => {
           {/* <span className="widget">📝</span> */}
           {/* <span className="widget">🏔️</span> */}
            <img 
-    src="/upload/upload-favicon-no-bg.png" 
+    src="/upload-favicon-no-bg.png" 
     alt="Chat" 
     className="button-icon widget"
     style={{ width: "77px", height: "77px" }}

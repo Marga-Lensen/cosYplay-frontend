@@ -111,7 +111,7 @@ const UploadForm = ({ uploadFile, setView }) => {
             style={{ width: "200px", display: "flex", alignItems: "center" }}
           >
             <img
-              src="/upload/upload-favicon-no-bg.png"
+              src="/upload-favicon-no-bg.png"
               alt="upload"
               style={{ width: 30, marginRight: "1em" }}
             />
