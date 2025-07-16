@@ -39,7 +39,9 @@ body {
 
   /* background: url("SakuraGlas.png") no-repeat center center fixed; */
   /* background: url("SakuraGlas-ohneRand.png") no-repeat center center fixed; */
-  background: url("SakuraGlas-ohneRand-yes.png") no-repeat center center fixed;
+  /* background: url("SakuraGlas-ohneRand-yes.png") no-repeat center center fixed; */
+  background: url(/SakuraGlas-ohneRand-yes.png) no-repeat center center fixed;
+
 /* background: url("SakuraMoon.jpg") no-repeat center center fixed; */
 
 /* background: radial-gradient(rgba(240, 248, 255, 0.3479), rgba(128, 0, 128, 0.486)),  url("/SakuraMoon.jpg") no-repeat center center fixed; */
