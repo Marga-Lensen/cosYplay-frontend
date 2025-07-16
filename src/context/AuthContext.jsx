@@ -86,7 +86,7 @@ export const AuthProvider = ({ children }) => {
       setUser(null);
       setIsAuthenticated(false);
       setIsVerified(false);
-      navigate("/login");
+      // navigate("/login");
     } catch (err) {
       console.error("Logout Error:", err.message);
     }
