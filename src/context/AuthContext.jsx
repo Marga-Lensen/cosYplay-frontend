@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const res = await axiosInstance.post("/auth/register", { email, password }, { withCredentials: true });
       if (res.data.success) {
-        navigate("/login", { state: { email } });
+        // navigate("/login", { state: { email } });
       }
       return res.data;
     } catch (err) {
@@ -68,7 +68,7 @@ export const AuthProvider = ({ children }) => {
         if (res.data.user?.isVerified !== undefined) {
           setIsVerified(res.data.user.isVerified);
         }
-        navigate("/cosYspace");
+        // navigate("/cosYspace");
       } else {
         setIsAuthenticated(false);
         setUser(null);
