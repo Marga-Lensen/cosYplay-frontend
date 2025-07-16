@@ -1,5 +1,5 @@
 // WebDev_Jahreskurs/_final-project-MDM/_cosYplay-MaLe/cosYspace-auth/cosYspace-fullstack-SPA/auth-frontend/src/components/CosYspace.jsx
-
+import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import { FaComments, FaEdit, FaSignOutAlt } from "react-icons/fa"; // React-Icons
@@ -8,12 +8,25 @@ import Aperture from "./Aperture";
 import "../styles/space-styles.css";
 
 const CosYspace = () => {
-  // const { user, logout } = useAuth();
+    const [isApertureOpen, setIsApertureOpen] = useState(true); // Portal ist offen im CosYspace
+    const [logoutMessage, setLogoutMessage] = useState("");
+    // const { user, logout } = useAuth();
   const navigate = useNavigate();
   // const { user } = useAuth();
-  const { isAuthenticated, user } = useAuth();
+  const { isAuthenticated, user, logout } = useAuth();
   console.log("Aktueller User:", user);
   console.log("cosYspace auth:", { isAuthenticated, user });
+
+    const handleLogout = () => {
+    console.log("🌀 Logout mit schließendem Portal...");
+    setLogoutMessage("✨ Das Portal schließt sich – du verlässt cosYspace …");
+    setIsApertureOpen(false); // Portal schließen
+
+    setTimeout(() => {
+      logout();         // Session beenden
+      navigate("/logout");    // Zur Startseite
+    }, 3500); // Muss mit Aperture-Animation übereinstimmen
+  };
 
   return (
     <div className="cosyspace-container">
@@ -21,11 +34,12 @@ const CosYspace = () => {
       {/* <p>Hallo {user?.username || user?.email || "User"}!</p> */}
 
       <div className="exit">
-        <button className="logout-button" onClick={() => navigate("/logout")}>
+        {/* <button className="logout-button" onClick={() => navigate("/logout")}> */}
+        <button className="logout-button" onClick={handleLogout}>
           Logout <FaSignOutAlt className="button-icon" />
         </button>
-
-        <Aperture />
+      {logoutMessage && <p className="portal-message">{logoutMessage}</p>}
+        <Aperture isOpen={isApertureOpen}/>
       </div>
 
       <div className="button-grid">

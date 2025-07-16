@@ -260,3 +260,13 @@ h1.home:hover {
     background-position: -200% center;
   }
 }
+.portal-message {
+  margin-top: 1rem;
+  background-color: #2d1c559c;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  color: #d7c4ff;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+  text-shadow: 0 0 6px #9e7bb5;
+}

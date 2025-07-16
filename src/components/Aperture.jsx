@@ -36,7 +36,7 @@ const Aperture = ({isOpen=false}) => {
 
       <svg viewBox="0 0 200 200" className="aperture-svg">
         {/* <circle cx="100" cy="100" r="95" fill="#111" stroke="#333" strokeWidth="2" /> */}
-        <circle cx="100" cy="100" r="95" fill="#0f0f0f" stroke="skyblue" strokeWidth="2" />
+        <circle cx="100" cy="100" r="95" fill="#441046" stroke="skyblue" strokeWidth="2" />
 
         {blades.map((_, i) => {
           const baseAngle = (360 / NUM_BLADES) * i;
