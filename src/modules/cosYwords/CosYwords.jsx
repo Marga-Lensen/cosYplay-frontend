@@ -65,22 +65,22 @@ function CosYwords() {
     const handleRegister = () => {
     console.log("📸 Login-Button gedrückt");
     setIsApertureOpen(true);
-  setMagicMessage("✨ Das Portal öffnet sich und du kannst zum geschützten Bereich cosYspace 🌸 gehen!");
+  setMagicMessage("✨ Das Portal zum 🌸 cosYspace 🌸 öffnet sich!");
     // Magie & Weiterleitung nach 2s
     setTimeout(() => {
       navigate('/register');
       setMagicMessage(""); // Nachricht nach Navigation ausblenden (optional)
-    }, 6000);
+    }, 5000);
   };
     const handleLogin = () => {
     console.log("📸 Login-Button gedrückt");
     setIsApertureOpen(true);
-  setMagicMessage("✨ Das Portal öffnet sich und du kannst zum geschützten Bereich cosYspace 🌸 gehen!");
+  setMagicMessage("✨ Das Portal zum 🌸 cosYspace 🌸 öffnet sich!");
     // Magie & Weiterleitung nach 2s
     setTimeout(() => {
       navigate('/login');
       setMagicMessage(""); // Nachricht nach Navigation ausblenden (optional)
-    }, 6000);
+    }, 5000);
   };
 
 

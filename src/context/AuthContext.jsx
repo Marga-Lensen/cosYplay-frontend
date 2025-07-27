@@ -81,6 +81,7 @@ export const AuthProvider = ({ children }) => {
       if (res.data.success) {
         setIsAuthenticated(true);
         setUser(res.data.user || null);
+        setEmail(res.data.user?.email || null); // ⬅️ hier ergänzen
         if (res.data.user?.isVerified !== undefined) {
           console.log("📌 OTP verification status:", res.data.user.isVerified);
           setIsVerified(res.data.user.isVerified);
@@ -102,6 +103,7 @@ export const AuthProvider = ({ children }) => {
       setUser(null);
       setIsAuthenticated(false);
       // setIsVerified(false); // natürlich NICHT tun !!!
+      setEmail(null); // ⬅️ Reset
     } catch (err) {
       console.error("Logout Error:", err.message);
     }
