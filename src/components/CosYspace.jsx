@@ -17,6 +17,13 @@ const CosYspace = () => {
   console.log("Aktueller User:", user);
   console.log("cosYspace auth:", { isAuthenticated, user });
 
+/*   const { user, isAuthenticated, isVerified } = useAuth();
+
+console.log("✅ Aktueller User:", user);
+console.log("🔐 isAuthenticated:", isAuthenticated);
+console.log("📩 isVerified:", isVerified); */
+
+
     const handleLogout = () => {
     console.log("🌀 Logout mit schließendem Portal...");
     setLogoutMessage("✨ Das Portal schließt sich – du verlässt cosYspace …");
