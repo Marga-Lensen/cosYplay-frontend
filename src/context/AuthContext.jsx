@@ -1,10 +1,16 @@
 // src/context/AuthContext.jsx
 import { createContext, useContext, useState, useEffect } from "react";
+
+// import { useNavigate } from "react-router-dom";
+
 import axiosInstance from "../axiosInstance";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+  // const navigate = useNavigate();  // nicht hier! mach das in den komponenten!
+  const [loading, setLoading] = useState(true);
+
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isVerified, setIsVerified] = useState(false); // optional, nicht zwingend
@@ -20,38 +26,45 @@ export const AuthProvider = ({ children }) => {
           { withCredentials: true }
         );
         console.log(
-          "Auth successful, user:",
+          "Auth check response, user:",
           JSON.stringify(res.data.user, null, 2)
         );
 
-        console.log("Auth check response:", res.data);
+        console.log("Auth check response, res.data:", res.data);
         console.log("Cookies:", document.cookie); // Check if cookies are present
 
         if (res.data.success) {
-          console.log("Auth successful, user:", res.data.user); // wenig; ergänze:
           const user = res.data.user;
-          console.log("✅ Auth successful:", user.email);
-          console.log("🔐 isVerified (from DB):", user?.isVerified);
+          console.log("✅ Auth successful with email:", user.email);
+          console.log("🔐 isVerified (from DB):", user?.isVerified); // in mongoDB allerdings isAccountVerified
+          /* isAuthenticated controller macht const isVeried = isAccountVerified conversion */
 
           setIsAuthenticated(true);
           setUser(user || null);
           if (user?.isVerified !== undefined) {
-            console.log("➡️ Setting isVerified state to:", user.isVerified);
+            console.log(
+              "➡️ Setting isVerified state to (true if success):",
+              user.isVerified
+            );
             setIsVerified(user.isVerified);
           }
         } else {
           console.log("Auth failed, no success flag");
           setIsAuthenticated(false);
           setUser(null);
+          setIsVerified(false);
         }
       } catch (err) {
         console.error("Auth check error:", err.message);
         console.error("Error details:", err.response?.data || err.message);
         setIsAuthenticated(false);
         setUser(null);
+        setIsVerified(false);
+      } finally {
+        setLoading(false); // <- GANZ WICHTIG
       }
     };
-
+    
     checkAuth();
   }, []);
 

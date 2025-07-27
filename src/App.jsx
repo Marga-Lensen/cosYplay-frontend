@@ -76,9 +76,9 @@ function App() {
               <Route
                 path="/cosYspace"
                 element={
-                  // <ProtectedRoute>
+                  <ProtectedRoute>
                   <CosYspace />
-                  // </ProtectedRoute>
+                  </ProtectedRoute>
                 }
               />
 

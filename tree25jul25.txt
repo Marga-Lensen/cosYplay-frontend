@@ -1,0 +1,118 @@
+.
+├── public
+│   ├── SakuraGlas-ohneRand-yes.png
+│   ├── upload-favicon-no-bg.png
+│   ├── upload.png
+│   ├── vite.svg
+│   └── wonderlink-logo.png
+├── src
+│   ├── api
+│   │   ├── uploadService.js
+│   │   └── uploadService-onlyFile.js
+│   ├── assets
+│   │   └── react.svg
+│   ├── components
+│   │   ├── Aperture.css
+│   │   ├── Aperture.jsx
+│   │   ├── Blossoms.css
+│   │   ├── Blossoms.jsx
+│   │   ├── ChatWidget.jsx
+│   │   ├── Contactform.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Contact-simple.jsx
+│   │   ├── CosYspace.jsx
+│   │   ├── CosYspace-previews.jsx
+│   │   ├── CosYspace-simple.jsx
+│   │   ├── EmailExistsOptions.jsx
+│   │   ├── FallbackOptions.jsx
+│   │   ├── Header.jsx
+│   │   ├── Homepage.jsx
+│   │   ├── Login.jsx
+│   │   ├── Logout.css
+│   │   ├── Logout.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── NotFoundPage.jsx
+│   │   ├── ProtectedRoute.jsx
+│   │   ├── Register.css
+│   │   ├── Register.jsx
+│   │   ├── ResetPassword.jsx
+│   │   ├── SendOtp.jsx
+│   │   ├── SendResetOtp.jsx
+│   │   └── VerifyEmail.jsx
+│   ├── context
+│   │   └── AuthContext.jsx
+│   ├── layouts
+│   │   ├── AuthLayout.jsx
+│   │   ├── CosYpostLayout.jsx
+│   │   └── CosYwordsLayout.jsx
+│   ├── modules
+│   │   ├── cosYchat
+│   │   │   ├── utils
+│   │   │   │   ├── connectIO.js
+│   │   │   │   └── connectIO-mini.js
+│   │   │   ├── chat-server.js
+│   │   │   ├── ChatWidget-complete.jsx
+│   │   │   ├── ChatWidget.jsx
+│   │   │   ├── CosYchat-bg-test.css
+│   │   │   ├── CosYchat.css
+│   │   │   ├── CosYchat.jsx
+│   │   │   └── db.json
+│   │   ├── cosYpost
+│   │   │   ├── components
+│   │   │   │   ├── App.css
+│   │   │   │   ├── App.jsx
+│   │   │   │   ├── FileList.jsx
+│   │   │   │   ├── UploadForm.jsx
+│   │   │   │   ├── UploadMessagePreview.jsx
+│   │   │   │   └── UploadMessagePreview.scss
+│   │   │   ├── CosYpost.jsx
+│   │   │   ├── FileList.jsx
+│   │   │   └── UploadForm.jsx
+│   │   └── cosYwords
+│   │       ├── cosYwords.css
+│   │       ├── CosYwords.css
+│   │       ├── cosYwords.jsx
+│   │       ├── CosYwords.jsx
+│   │       └── SakuraGlas.png
+│   ├── previews
+│   │   ├── chatPreviews
+│   │   │   ├── Bildschirmfoto vom 2025-07-01 18-27-21.png
+│   │   │   ├── Bildschirmfoto vom 2025-07-01 22-18-25.png
+│   │   │   ├── Bildschirmfoto vom 2025-07-01 22-21-26.png
+│   │   │   ├── Bildschirmfoto vom 2025-07-01 23-06-53.png
+│   │   │   └── Bildschirmfoto vom 2025-07-01 23-20-36.png
+│   │   ├── postPreviews
+│   │   │   └── Bildschirmfoto vom 2025-07-02 13-40-47.png
+│   │   ├── chat-preview.png
+│   │   ├── chatPreview.png
+│   │   └── postPreview.png
+│   ├── styles
+│   │   ├── App-improved.css
+│   │   ├── auth-styles.css
+│   │   ├── auth-styles-OG.css
+│   │   ├── chat-styles.css
+│   │   ├── home-styles.css
+│   │   ├── home-styles-OG.css
+│   │   ├── post-styles.css
+│   │   ├── post-styles-OG.css
+│   │   ├── space-styles.css
+│   │   └── space-styles-previews.css
+│   ├── App.css
+│   ├── App.jsx
+│   ├── axiosInstance.js
+│   ├── config.js
+│   ├── index.css
+│   └── main.jsx
+├── eslint.config.js
+├── Fonts.html
+├── Impressum.html
+├── index.html
+├── package.json
+├── package-lock.json
+├── README.md
+├── tree25jul25.txt
+├── tree6jul25.txt
+├── vercel.json
+└── vite.config.js
+
+18 directories, 98 files
