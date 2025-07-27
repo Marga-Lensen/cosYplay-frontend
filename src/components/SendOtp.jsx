@@ -9,40 +9,51 @@ const SendOtp = () => {
   const { isVerified, isAuthenticated } = useAuth();
   const [message, setMessage] = useState("");
   const [errorCode, setErrorCode] = useState(null);
-
   const [isSending, setIsSending] = useState(false);
+
   const navigate = useNavigate();
   const location = useLocation();
 
   // const email = location.state?.email || localStorage.getItem("lastLoginEmail");
-  const email = location.state?.email 
+  const email = location.state?.email // OPTION 🔢 wenn es mitgeschickt wird
   console.log(email);
   
+  // const { email } = useAuth();  // OPTION 🔢 wenn wir es mit Context machen
 
-  // Optional, wenn du willst, dass der Wert im localStorage immer aktualisiert wird:
-  if (email) {
+  // 🔢 Optional, wenn du willst, dass der Wert im localStorage immer aktualisiert wird:
+ // if (email) {
     // wichtig, sonst könnte null bzw undefined geschrieben werden
-    localStorage.setItem("lastLoginEmail", email);
-  }
+    // localStorage.setItem("lastLoginEmail", email);
+  // }
 
-  useEffect(() => {
-    if (!email) {
-      setMessage("Keine E-Mail gefunden – Weiterleitung zur Registrierung ...");
-      const timeoutId = setTimeout(() => navigate("/register"), 4500);
-      return () => clearTimeout(timeoutId); // ← Aufräumen
-    }
-    // }, [email, navigate]);
-  }, [email]);
+  /* ########### ⚠️ ############ 
+  neu, WICHTIG, sollte greifen wenn man zum /cosYspace will (z.B. über Hamburger menü) aber nicht darf 
+  - ProtectedRoute schickt dich hierhin.
+  - du hast aber keine Email mitgenommen (geht nicht aus ProtectedRoute)
+  
+  neue Situation:
+  man ist hier weil !isVerified aber email ist verloren gegangen
+   ############# ⚠️ ############## */
+
+  // useEffect(() => {
+  //   if (!email) {
+  //     setMessage("🤔 Keine E-Mail gefunden – Weiterleitung zum Login ...");
+  //     const timeoutId = setTimeout(() => navigate("/login"), 4500);
+  //     return () => clearTimeout(timeoutId); // ← Aufräumen
+  //   }
+  //   }, [email, navigate]);
+  // // }, [email]);
 
   const handleOTPRequest = async () => {
+    if (!email) return;
+
     if (isVerified) {
       setMessage(`ℹ️ Dein Account (${email}) ist bereits verifiziert.`);
       return;
     }
-    if (!email) return;
 
     setIsSending(true);
-    // setMessage("");
+    // setMessage("");  // oder aktivieren ❔  erstmal stehen lassen
 
     try {
       const res = await axiosInstance.post(
@@ -51,9 +62,10 @@ const SendOtp = () => {
         { withCredentials: true }
       );
 
-      // if (res.data.success === true) {
-      /* if (!res.data.success) {
-        const backendMessage = res.data.message;
+      // if (res.data.success === true) {   // ❔ jetzt gar nicht mehr abfragen ?
+      /* if (!res.data.success) {  // ❔ jetzt gar nicht mehr abfragen ?
+      /* doch: in catch(error) block ⤵️ switch cases aufgrund error messages u status code! */
+      /*  const backendMessage = res.data.message;
         switch (backendMessage) {
           case "User is already verified.":
             setMessage(`ℹ️ Dein Account (${email}) ist bereits verifiziert.`);
@@ -69,7 +81,7 @@ const SendOtp = () => {
         }
       } else { */
       setMessage(
-        `✅ OTP wurde per Email gesendet. 
+        `✅ OTP wurde per Email an ${email} gesendet. 
           
           Du wirst gleich zur Eingabe weitergeleitet...`
       );
@@ -77,7 +89,7 @@ const SendOtp = () => {
       // Weiterleitung zur Verifizierung nach kurzer Pause
       setTimeout(() => {
         navigate("/verify-account", { state: { email } });
-      }, 5000);
+      }, 4500);
     } catch (error) {
       if (error.response) {
         /*     const backendMessage = error.response.data?.message;
@@ -94,11 +106,11 @@ const SendOtp = () => {
             break;
           case 429:
             setMessage(
-              "⚠️ Zu viele Anfragen – bitte warte etwas, bevor du es erneut versuchst."
+              "🤯 Zu viele Anfragen – bitte warte etwas, bevor du es erneut versuchst."
             );
             break;
           case 404:
-            setMessage("❌ Benutzerkonto wurde nicht gefunden.");
+            setMessage("🤷🏿‍♀️ Benutzerkonto wurde nicht gefunden.");
             break;
           default:
             setMessage(
@@ -116,6 +128,13 @@ const SendOtp = () => {
   return (
     <div className="form-container">
       <h2>E-Mail Verifizieren</h2>
+      {/* Nachricht */}
+      {!email && (   // ➕ war ausgeklammert mit message, aber nur !email hatten wir noch nicht
+        <div className="message-box">
+          <p>{message}</p>
+        </div>
+      )}
+
       {email && !isVerified && (
         <div className="sendOtp">
           <h4>
@@ -125,18 +144,12 @@ const SendOtp = () => {
         </div>
       )}
       {/* Standard-Sendebutton */}
-      {!isVerified && (
+      {!isVerified && email && (   // ➕ email hinzugefügt
         <button onClick={handleOTPRequest} disabled={isSending}>
           {isSending ? "Sende..." : "OTP senden"}
         </button>
       )}
 
-      {/* Nachricht */}
-{/*       {message && (
-        <div className="message-box">
-          <p>{message}</p>
-        </div>
-      )} */}
 
       {/* Fehler: Bereits verifiziert */}
       {errorCode === 409 && (

@@ -2,26 +2,31 @@
 
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
+import Spinner from "./Spinner.jsx";
 
 const ProtectedRoute = ({ children }) => {
-  const { isAuthenticated, isVerified, loading } = useAuth();
-
   // const { isAuthenticated, loading } = useAuth();
+  const { isAuthenticated, isVerified, loading } = useAuth();
+  // Warten auf Auth-Status aus Context
+  // Danach prüfen auf Login und OTP-Verification
 
-if (loading) return null; // oder Spinner
+  // if (loading) return null; // oder Spinner
+  if (loading) {
+    return <Spinner />;
+  }
 
-// return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
-//  "unreachable code detected"  --- wsl weil (noch) kein < Outlet /> ❔
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
 
-if (!isAuthenticated) return <Navigate to="/login" replace />;
-
-  if (!isVerified) return <Navigate to="/send-verify-otp" replace />;
+  if (!isVerified) {
+    return <Navigate to="/send-verify-otp" replace />;
+  }
   // Redundant, weil Login isVerified prüft – bleibt zur Sicherheit vorläufig aktiv
   // das war in der vorigen version zutreffend; wo verify VOR login war
 
   return children;
 };
-
 
 export default ProtectedRoute;
 
