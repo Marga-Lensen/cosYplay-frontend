@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 // import { io } from 'socket.io-client';
-import socket from "./utils/connectIO";
-
+import {getSocket} from "./utils/connectIO";
+import { useLocation } from "react-router-dom";
 import EmojiPicker from "emoji-picker-react";
 import Blossoms from "../../components/Blossoms";
 // import '../../styles/chat-styles.css';
@@ -12,6 +12,9 @@ import "./CosYchat.css";
 // const socket = io('http://localhost:3000');
 
 function CosYchat() {
+  const socket = getSocket();
+  const location = useLocation();
+
   const [messages, setMessages] = useState([]);
   // const [username, setUsername] = useState('');
   const [message, setMessage] = useState("");
@@ -23,15 +26,19 @@ function CosYchat() {
   const navigate =useNavigate()
 
   useEffect(() => {
-    let storedId = localStorage.getItem("userId");
-    if (!storedId) {
-      storedId = crypto.randomUUID();
-      localStorage.setItem("userId", storedId);
+    if (location.pathname.startsWith("/cosYchat")) {
+      if (!socket.connected) socket.connect();
+    } else {
+      if (socket.connected) socket.disconnect();
     }
-    setUserId(storedId);
-  }, []);
+
+    return () => {
+      if (socket.connected) socket.disconnect();
+    };
+  }, [location.pathname]);
 
   useEffect(() => {
+
     socket.on("initMessages", (msgs) => {
       setMessages(msgs);
     });
@@ -46,7 +53,16 @@ function CosYchat() {
     };
   }, []);
 
-  useEffect(() => {
+    useEffect(() => {
+    let storedId = localStorage.getItem("userId");
+    if (!storedId) {
+      storedId = crypto.randomUUID();
+      localStorage.setItem("userId", storedId);
+    }
+    setUserId(storedId);
+  }, []);
+
+    useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 

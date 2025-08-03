@@ -1,19 +1,27 @@
 // src/modules/cosYchat/utils/connectIO.js
-import { io } from 'socket.io-client';
+import { io } from "socket.io-client";
 
-const socket = io('http://localhost:3000');
+let socket;
 
-// Verbindungs-Logs zentral
-socket.on('connect', () => {
-  console.log('✅ Verbunden mit dem Chat-Server (Socket-ID):', socket.id);
-});
+export const getSocket = () => {
+  if (!socket) {
+    socket = io(import.meta.env.PROD
+      ? "https://cosyplay-backend.onrender.com"
+      : "http://localhost:3000",
+      { autoConnect: false }
+    );
 
-socket.on('disconnect', (reason) => {
-  console.log('⚠️ Verbindung getrennt:', reason);
-});
+    socket.on("connect", () => {
+      console.log("✅ Verbunden mit dem Chat-Server (Socket-ID):", socket.id);
+    });
 
-socket.on('connect_error', (error) => {
-  console.error('❌ Verbindungsfehler:', error.message);
-});
+    socket.on("disconnect", (reason) => {
+      console.log("⚠️ Verbindung getrennt:", reason);
+    });
 
-export default socket;
+    socket.on("connect_error", (error) => {
+      console.error("❌ Verbindungsfehler:", error.message);
+    });
+  }
+  return socket;
+};
