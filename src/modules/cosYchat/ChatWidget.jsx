@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import socket from './utils/connectIO';
+import {getSocket} from './utils/connectIO';
 
 export default function ChatWidget() {
+  const socket = getSocket();
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
 
