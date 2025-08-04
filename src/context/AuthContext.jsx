@@ -42,10 +42,10 @@ export const AuthProvider = ({ children }) => {
           setIsAuthenticated(true);
           setUser(user || null);
           if (user?.isVerified !== undefined) {
-            console.log(
+/*             console.log(
               "➡️ Setting isVerified state to (true if success):",
               user.isVerified
-            );
+            ); */
             setIsVerified(user.isVerified);
           }
         } else {
@@ -55,8 +55,9 @@ export const AuthProvider = ({ children }) => {
           setIsVerified(false);
         }
       } catch (err) {
-        console.error("Auth check error:", err.message);
-        console.error("Error details:", err.response?.data || err.message);
+        /* logs nur beim DEBUG nicht in prototype / demo */
+        // console.error("Auth check error:", err.message);
+        // console.error("Error details:", err.response?.data || err.message);
         setIsAuthenticated(false);
         setUser(null);
         setIsVerified(false);
